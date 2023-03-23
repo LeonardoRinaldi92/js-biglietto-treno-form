@@ -18,7 +18,7 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     let nome = document.getElementById("nome").value
-    let nomeMaiuscolo = nome.charAt(0).toUpperCase() + nome.slice(1);
+    let nomeMaiuscolo = nome.charAt(0).toUpperCase() +nome.slice(1);
     let cognome = document.getElementById("cognome").value
     let cognomePuntato = (cognome.charAt(0).toUpperCase(0)) + "."
 
