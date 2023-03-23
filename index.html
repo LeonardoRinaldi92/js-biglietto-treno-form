@@ -17,34 +17,42 @@
                     calcola il prezzo del tuo biglietto
                   </h1>
                 </div>
-                <div class="card-body p-4">
-                  <select class="form-select" name="selelect" aria-label="Default select example" id="partenza" >
-                    <option value="" selected>Open this select menu</option>
-                    <option value="milano">One</option>
-                    <option value="roma">Two</option>
-                    <option value="napoli">Three</option>
-                  </select>
-
-                  <select class="form-select" name="selelect" aria-label="Default select example" id="arrivo" >
-                    <option value="" selected>Open this select menu</option>
-                    <option value="milano">One</option>
-                    <option class="d-none" value="roma">Two</option>
-                    <option value="napoli">Three</option>
-                  </select>
-                  <a href="#" class="btn btn-danger" id="salva">
-                    cazzo
-
-                  </a>
-
-                </div>
-
+                <form id="form" action="#" >
+                  <div class="card-body p-4 row g-3">
+                    <div class="col-6">
+                      <select class="form-select" name="selelect" aria-label="Default select example" id="partenza" >
+                      <option value="" selected>Scegli la partenza...</option>
+                      <option value="roma">Roma</option>
+                      <option value="milano">Milano</option>
+                      <option value="torino">Torino</option>
+                      <option value="genova">Genova</option>
+                      <option value="firenze">Firenze</option>
+                      <option value="napoli">Napoli</option>
+                      <option value="lecce">Lecce</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select" name="selelect" aria-label="Default select example" id="arrivo" >
+                      <option value="" selected>Scegli la citta di arrivo...</option>
+                      <option value="roma">Roma</option>
+                      <option value="milano">Milano</option>
+                      <option value="torino">Torino</option>
+                      <option value="genova">Genova</option>
+                      <option value="firenze">Firenze</option>
+                      <option value="napoli">Napoli</option>
+                      <option value="lecce">Lecce</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Vai!</button>
+                    </div>
+                  </div>
+                </form>
               </div>
+            </div>
           </div>
-
         </div>
-
       </div>
-
     </main>
     <footer></footer>
     <script src="./assets/js/main.js"></script>
