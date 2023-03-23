@@ -1,16 +1,18 @@
-let partenza = '';
-let arrivo = '';
+
 let sameCity = 'La città di partenza e quella di arrivo non possono combaciare!'
 let tratta;
 
 
-document.getElementById('partenza').addEventListener("change", (event) => {
-    partenza = event.target.value;
-});
 
-document.getElementById('arrivo').addEventListener("change", (event) => {
-    arrivo = event.target.value;
-});
+// PRENDERE LE RISPOSTE IN DIRETTA SENZA L'USO DEL BUTTON
+
+// document.getElementById('partenza').addEventListener("change", (event) => {
+//     partenza = event.target.value;
+// });
+
+// document.getElementById('arrivo').addEventListener("change", (event) => {
+//     arrivo = event.target.value;
+// });
 
 const form = document.getElementById("form");
 
@@ -21,6 +23,8 @@ form.addEventListener("submit", function (event) {
     let nomeMaiuscolo = nome.charAt(0).toUpperCase() +nome.slice(1);
     let cognome = document.getElementById("cognome").value
     let cognomePuntato = (cognome.charAt(0).toUpperCase(0)) + "."
+    let partenza = document.getElementById("partenza").value ;
+    let arrivo = document.getElementById("arrivo").value ;
 
 
     function calcolaprezzo(tratta, sconto) {
