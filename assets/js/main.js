@@ -67,6 +67,44 @@ form.addEventListener("submit", function (event) {
             tratta = 1054}
         else if (partenza === 'genova' && arrivo === 'roma'){
             tratta = 503}
+        else if (partenza === 'firenze' && arrivo === 'milano'){
+            tratta = 272}
+        else if (partenza === 'firenze' && arrivo === 'napoli'){
+            tratta = 472}
+        else if (partenza === 'firenze' && arrivo === 'torino'){
+            tratta = 432}
+        else if (partenza === 'firenze' && arrivo === 'genova'){
+            tratta = 232}
+        else if (partenza === 'firenze' && arrivo === 'lecce'){
+            tratta = 824}
+        else if (partenza === 'firenze' && arrivo === 'roma'){
+            tratta = 345}
+        else if (partenza === 'napoli' && arrivo === 'milano'){
+            tratta = 772}
+        else if (partenza === 'napoli' && arrivo === 'firenze'){
+            tratta = 472}
+        else if (partenza === 'napoli' && arrivo === 'torino'){
+            tratta = 888}
+        else if (partenza === 'napoli' && arrivo === 'genova'){
+            tratta = 702}
+        else if (partenza === 'napoli' && arrivo === 'lecce'){
+            tratta = 408}
+        else if (partenza === 'napoli' && arrivo === 'roma'){
+            tratta = 225}
+        else if (partenza === 'lecce' && arrivo === 'milano'){
+            tratta = 1031}
+        else if (partenza === 'lecce' && arrivo === 'firenze'){
+            tratta = 824}
+        else if (partenza === 'lecce' && arrivo === 'torino'){
+            tratta = 1147}
+        else if (partenza === 'lecce' && arrivo === 'genova'){
+            tratta = 1054}
+        else if (partenza === 'lecce' && arrivo === 'napoli'){
+            tratta = 408}
+        else if (partenza === 'lecce' && arrivo === 'roma'){
+            tratta = 577}
+            
+    
     
     }
     console.log(tratta)
