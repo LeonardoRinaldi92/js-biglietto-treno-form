@@ -3,6 +3,7 @@ let arrivo = '';
 let sameCity = 'La città di partenza e quella di arrivo non possono combaciare!'
 let tratta;
 
+
 document.getElementById('partenza').addEventListener("change", (event) => {
     partenza = event.target.value;
 });
@@ -15,6 +16,16 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
+
+    let nome = document.getElementById("nome").value
+    let nomeMaiuscolo = nome.charAt(0).toUpperCase() + nome.slice(1);
+    let cognome = document.getElementById("cognome").value
+    let cognomePuntato = (cognome.charAt(0).toUpperCase(0)) + "."
+
+
+    function calcolaprezzo(tratta, sconto) {
+        return ((tratta * 0.21) * sconto).toFixed(2)
+    }
 
     if (partenza === arrivo) {
         alert (sameCity)
@@ -102,12 +113,19 @@ form.addEventListener("submit", function (event) {
         else if (partenza === 'lecce' && arrivo === 'napoli'){
             tratta = 408}
         else if (partenza === 'lecce' && arrivo === 'roma'){
-            tratta = 577}
-            
-    
-    
+            tratta = 577}   
     }
-    console.log(tratta)
+
+    if (document.getElementById("eta16").checked){
+        document.getElementById('prezzoFinale').innerText = nomeMaiuscolo +  " " + cognomePuntato + " " + "il tuo prezzo é:" + " " + calcolaprezzo(tratta, 0.8) + " euro";
+        document.getElementById('prezzoSconto').innerText = "hai risparmiato:" + " "  + (calcolaprezzo(tratta, 1) - calcolaprezzo(tratta, 0.8)).toFixed(2) + " euro, grazie alla categoria under18"    
+    } else if (document.getElementById("eta65").checked){
+        document.getElementById('prezzoFinale').innerText = nomeMaiuscolo +  " " + cognomePuntato + " " + "il tuo prezzo é:" + " " + calcolaprezzo(tratta, 0.6) + " euro";
+        document.getElementById('prezzoSconto').innerText = "hai risparmiato:" + " " + (calcolaprezzo(tratta, 1) - calcolaprezzo(tratta, 0.6)).toFixed(2) + " euro, grazie alla categoria over65"    
+    } else {
+        document.getElementById('prezzoFinale').innerText = nomeMaiuscolo +  " " + cognomePuntato + " " + "il tuo prezzo é:" + " " + calcolaprezzo(tratta, 1) + " euro";
+        document.getElementById('prezzoSconto').innerText = ""
+    }
 
 
 })
