@@ -25,6 +25,7 @@ form.addEventListener("submit", function (event) {
     let cognomePuntato = (cognome.charAt(0).toUpperCase(0)) + "."
     let partenza = document.getElementById("partenza").value ;
     let arrivo = document.getElementById("arrivo").value ;
+    document.getElementById("containerPrezzo").classList.remove("d-none");
 
 
     function calcolaprezzo(tratta, sconto) {
